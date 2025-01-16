@@ -10,15 +10,15 @@ public class Die
 
     public int[] SimulateRolls(int numRolls)
     {
-        // Set up an array to store roll results
+        // Initialize Array
         int[] rolls = new int[11];
 
         for (int i = 0; i < numRolls; i++)
         {
-            int result1 = RollDie();  // Roll the first die
-            int result2 = RollDie();  // Roll the second die
-            int finalResult = result1 + result2;  // Combine the two die results
-            rolls[finalResult - 2] += 1;  // Store the result in the array
+            int result1 = RollDie();
+            int result2 = RollDie();
+            int finalResult = result1 + result2;
+            rolls[finalResult - 2] += 1;  // Store the result in the proper index of array
         }
 
         return rolls;  // Return the array
